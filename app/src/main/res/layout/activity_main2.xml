@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2"
+    android:background="@drawable/background2">
+<LinearLayout
+    android:id="@+id/linear1"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:layout_marginTop="30dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+        android:id="@+id/img1"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/location"
+        android:layout_marginStart="120dp"
+        />
+    <TextView
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:text="Location"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="#112178"
+      />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/option"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="2dp"
+        />
+</LinearLayout>
+    <TextView
+        android:id="@+id/txt1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/linear1"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Monday, 1 January 10:00"
+        android:textColor="#65ACCD"
+        android:gravity="center"
+
+        />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/gridL"
+        android:layout_width="270dp"
+        android:layout_height="155dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="40dp"
+        android:backgroundTint="#5D6DE3"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@id/txt1"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            >
+            <ImageView
+                android:id="@+id/im1"
+                android:layout_width="170dp"
+                android:layout_height="170dp"
+                android:src="@drawable/suncloud"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="100dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+            <TextView
+                android:id="@+id/im"
+                android:layout_width="140dp"
+                android:layout_height="100dp"
+                android:text="22"
+                android:textSize="90dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                app:layout_constraintStart_toEndOf="@id/im1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                />
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="Mostly Clear"
+                android:textSize="20dp"
+                android:textColor="@color/white"
+                android:padding="2dp"
+                android:layout_marginEnd="40dp"
+                app:layout_constraintStart_toEndOf="@id/im1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/im"
+               />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+  <GridLayout
+      android:id="@+id/linear2"
+      android:layout_width="360dp"
+      android:layout_height="130dp"
+      android:columnCount="3"
+      android:rowCount="3"
+      app:layout_constraintTop_toBottomOf="@id/gridL"
+      app:layout_constraintStart_toStartOf="parent"
+      android:orientation="horizontal"
+      android:layout_marginTop="20dp"
+      android:layout_marginStart="20dp"
+      android:background="@drawable/shape"
+       >
+      <ImageView
+          android:id="@+id/tr1"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/umbrella"
+          android:layout_marginStart="60dp"
+          android:layout_marginTop="18dp"
+          app:layout_constraintTop_toBottomOf="@id/im1"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+      <ImageView
+          android:id="@+id/img2"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/water_drop"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+
+          />
+      <ImageView
+          android:id="@+id/im5"
+          android:layout_width="30dp"
+          android:layout_height="30dp"
+          android:src="@drawable/wind"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintStart_toEndOf="@id/img2"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintTop_toBottomOf="@id/im1"
+          />
+      <TextView
+          android:id="@+id/te3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="30%"
+          android:textSize="20dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintTop_toBottomOf="@id/tr1"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+      <TextView
+          android:id="@+id/t2"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="20%"
+          android:textSize="20dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintTop_toBottomOf="@id/img2"
+          app:layout_constraintStart_toEndOf="@id/te3"
+          />
+
+      <TextView
+          android:id="@+id/t4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="12 Km/h"
+          android:textSize="15dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintTop_toBottomOf="@id/im5"
+          app:layout_constraintEnd_toEndOf="parent"
+          />
+      <TextView
+          android:id="@+id/txt4"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Precipitation"
+          android:textSize="10dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="50dp"
+          app:layout_constraintTop_toBottomOf="@id/te3"
+          app:layout_constraintStart_toStartOf="parent"
+          />
+
+
+      <TextView
+          android:id="@+id/t1"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Humidity"
+          android:textSize="10dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintTop_toBottomOf="@id/t2"
+          app:layout_constraintStart_toEndOf="@id/txt4"
+          />
+
+
+      <TextView
+          android:id="@+id/t3"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="Wind speed"
+          android:textSize="10dp"
+          android:layout_marginTop="18dp"
+          android:layout_marginStart="60dp"
+          app:layout_constraintTop_toBottomOf="@id/t4"
+          app:layout_constraintEnd_toEndOf="parent"
+          />
+
+
+
+
+  </GridLayout>
+    <LinearLayout
+        android:id="@+id/linear3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/linear2"
+        android:layout_marginTop="30dp"
+      >
+
+        <TextView
+            android:id="@+id/txt2"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="Today"
+            android:textSize="18dp"
+            android:padding="3dp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="#112178"
+            />
+        <TextView
+            android:id="@+id/txt3"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:text="7-Days Forecasts >"
+            android:textSize="15dp"
+            android:textColor="#65ACCD"
+            android:padding="3dp"
+            android:layout_marginStart="90dp"
+            />
+
+    </LinearLayout>
+    <GridLayout
+        android:id="@+id/gridL2"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:layout_constraintTop_toBottomOf="@id/linear3"
+        app:layout_constraintStart_toStartOf="parent"
+        android:columnCount="4"
+        android:rowCount="1">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#93D9FA"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true"
+            >
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic4"
+                android:layout_gravity="center"
+                android:id="@+id/img3"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tx2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="33dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#A1CFE4"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true"
+            >
+            <TextView
+                android:id="@+id/textt2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic1"
+                android:layout_gravity="center"
+                android:id="@+id/img4"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tx3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="33dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#93D9FA"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true"
+            >
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic3"
+                android:layout_gravity="center"
+                android:id="@+id/img5"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tx4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="33dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="110dp"
+            android:layout_height="140dp"
+            app:cardCornerRadius="20dp"
+            app:cardBackgroundColor="#ABCBDA"
+            app:cardMaxElevation="12dp"
+            app:cardUseCompatPadding="true"
+            >
+            <TextView
+                android:id="@+id/text4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9:00"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="40dp"
+                android:src="@drawable/pic2"
+                android:layout_gravity="center"
+                android:id="@+id/img6"
+                android:contentDescription="@string/app_name" />
+
+            <TextView
+                android:id="@+id/tx5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22"
+                android:textSize="10dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="70dp"
+                android:layout_marginStart="33dp"
+                />
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </GridLayout>
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card"
+        android:layout_width="270dp"
+        android:layout_height="70dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:cardCornerRadius="20dp"
+        android:backgroundTint="#7483F3"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@id/gridL2"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/location"
+                android:layout_marginStart="65dp"
+                android:layout_marginTop="10dp"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="Location"
+                android:textSize="20dp"
+                android:layout_marginTop="6dp"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:text="21"
+                android:textSize="20dp"
+               android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:textStyle="bold"
+                android:textColor="#9E9D24"
+                />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            >
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="70dp"
+                android:src="@drawable/cloud"
+                android:id="@+id/img"
+                android:contentDescription="@string/app_name" />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:text="Mostly Cloudy"
+                android:textSize="10dp"
+                android:layout_marginTop="30dp"
+                android:textStyle="bold"
+                android:textColor="#D1D0D0"
+                />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
